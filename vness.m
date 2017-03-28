@@ -1,4 +1,4 @@
-function v = vness(L,s)
+function v = vness(L, s)
 [w,h]=size(L);
 [Lxx,Lyy,Lxy] = make_hessian(L,s);
 
@@ -9,7 +9,7 @@ R_b = zeros(w,h);
 v = zeros(w,h);
 alpha = 0.5;
 beta = 0.5;
-c = 10;
+c = 2;
 for i =[1:w],
     for j = [1:h],
         A = [Lxx(i,j), Lxy(i,j);Lxy(i,j), Lyy(i,j) ];
